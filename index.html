@@ -10,7 +10,7 @@
     
 
     <section id="simulator">
-        <h1>SIMULADOR DE INVERSIÓN FINAL.</h1>
+        <h1>SIMULADOR DE INVERSIÓN</h1>
         <div class="cont-flex">
             <div class="left">
                 <h2>Datos Inversionista</h2>
@@ -36,7 +36,7 @@
                     <div class="group-data two-columns">
                         <label for="#" id="cTiempo">Tiempo de Inversión:</label>
                         <select>
-                            <option>Elige una opción</option>
+                            <option value="">Elige una opción</option>
                             <option value="1">1 Año</option>
                             <option value="2">2 Años</option>
                             <option value="3">3 Años</option>
@@ -52,7 +52,7 @@
                     <img src="img/img-simulator.svg" alt="">
                 </div>
                 <!-- La clase disabled debe ponerse en el contendor anterior para mostrar el resultado -->
-                <div class="post-simulation  disabled">
+                <div class="post-simulation  disabled" id="post-simulation">
                     <h3>Teniendo en cuenta que tu tiempo de inversión fue de <span id="sTiempo">12 MESES</span> te pagaremos el <span id="sInteres">1.6%</span> de interés mensual.</h3>
 
                     <div class="total ">
@@ -69,9 +69,12 @@
                 </div>
                 
             </div>
+            
         </div>
-        
     </section>
+    <footer>
+        <p>Develop:</p><a href="https://github.com/DIEGOBERNAL12">Diego Alejandro Bernal E</a>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>

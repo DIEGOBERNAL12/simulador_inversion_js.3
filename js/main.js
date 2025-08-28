@@ -22,12 +22,12 @@ function simulador(){
     let total = 0;
 
     if (cNombres == "" || cEmail == "" || cMonto == "" || cTiempo == "") {
-        alert("Complete los campos obligatorios.")
+        alert("Complete los campos obligatorios.");
     }
     else{
         contPost.classList.remove('disabled');
         contPre.classList.add('disabled');
-        switch (Tiempo) {
+        switch (cTiempo) {
         case "1":
             // en este case haremos el claculo si el tiempo corresponde a un año
             ganancia = (cMonto * 0.008)*12;
@@ -47,8 +47,8 @@ function simulador(){
             sInteres.textContent = '1.7%';
             sTiempo.textContent = '36 MESES';
             break;
-    }
-    }
+    };
+    };
 
     sTotal.textContent = total;
     sGanancias.textContent = ganancia;
