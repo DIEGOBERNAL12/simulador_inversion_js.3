@@ -2,9 +2,6 @@ function simulador(){
     const contPre = document.getElementById("pre_simulation");
     const contPost = document.getElementById("post_simulation");
 
-    contPost.classList.remove('disabled');
-    contPre.classList.add('disabled');
-
     // variables que capturan los valores de los campos
     let Nombres = document.getElementById('cNombres').value;
     let Telefono = document.getElementById('cTelefono').value;
@@ -24,7 +21,13 @@ function simulador(){
     let ganancia = 0;
     let total = 0;
 
-    switch (Tiempo) {
+    if (cNombres == "" || cEmail == "" || cMonto == "" || cTiempo == "") {
+        alert("Complete los campos obligatorios.")
+    }
+    else{
+        contPost.classList.remove('disabled');
+        contPre.classList.add('disabled');
+        switch (Tiempo) {
         case "1":
             // en este case haremos el claculo si el tiempo corresponde a un año
             ganancia = (cMonto * 0.008)*12;
@@ -45,13 +48,12 @@ function simulador(){
             sTiempo.textContent = '36 MESES';
             break;
     }
+    }
+
     sTotal.textContent = total;
     sGanancias.textContent = ganancia;
     sNombre.textContent = Nombres;
-    sCorreo.textContent = Email;
-
-
- 
+    sCorreo.textContent = Email; 
 }
 
 document.addEventListener('DOMContentLoaded', function (){
